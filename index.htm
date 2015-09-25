@@ -19,14 +19,14 @@
 			color:gray;
 			padding-top:40px;
 			animation: striscione 5s linear 2s;
-			position: absolute;
-			top: 450px;
+			position: fixed;
+			top: 400px;
 			width:100%
 		}
-		img { 
-			position:absolute; 
+		.aereo {
+			position:fixed; 
 			left:1500px; 
-			top: 500px;
+			top: 450px;
 			animation: aereo 7.5s linear 2s;
 		}
 		.testo { animation: dissolvenza 7s ease-out 7s infinite alternate }
@@ -48,7 +48,7 @@
 		}
 		</style>
 		<script>
-			function setSeconds() {
+			function setTime() {
 				var now=new Date(),
 					t=new Date(2016,1,28,0,0,0,0);
 				var sec=Math.round((t-now)/1000);
@@ -79,10 +79,10 @@
 		</table>
 	
 		<div class='striscione'><span class='testo'>al ritorno di Washti</span></div>
-		<img src='aereo.png'>
+		<img class='aereo' src='aereo.png'>
 		<script>
-			setSeconds();
-			window.setInterval(setSeconds,1000);
+			setTime();
+			window.setInterval(setTime,1000);
 		</script>
 	</body>
 </html>
