@@ -8,7 +8,7 @@
 		td:nth-child(1) {text-align:right;width:45%;}
 		td:nth-child(2) {text-align:left;padding-left:20px}
 		body {
-			overflow:hidden;
+			;overflow:hidden;
 			text-align:center;
 			font-family:Arial Black;
 			font-weigth:bold;
@@ -17,34 +17,36 @@
 		.striscione {
 			font-size:75px;
 			color:gray;
-			padding-top:40px;
 			animation: striscione 5s linear 2s;
 			position: fixed;
-			top: 400px;
-			width:100%
+			top: 450px;
+			width:100%;
 		}
 		.aereo {
 			position:fixed; 
-			left:150%; 
+			right:-40%;
 			top: 450px;
-			animation: aereo 7.5s linear 2s;
+			animation: aereo 5s linear 2s;
 		}
-		.testo { animation: dissolvenza 7s ease-out 7s infinite alternate }
+		.testo { 
+			animation: dissolvenza 7s ease-out 7s infinite alternate;
+			white-space:nowrap
+		}
 		.giorni { font-size: 100px }
 		.ore { font-size: 80px }
 		.minuti { font-size: 60px }
-		.secondi { font-size: 40px }
+		.secondi { font-size: 40px; }
 		@keyframes dissolvenza {
 			from {color: white;}
 			to {color: gray;}
 		}	
 		@keyframes aereo {
-			from {left:150%}
-			to {left:-60%}
+			from {right:-40%}
+			to {right:100%}
 		}
 		@keyframes striscione {
 			from {left:140%;color:white}
-			to {left:0px;color:white}
+			to {left:0%;color:white}
 		}
 		</style>
 		<script>
