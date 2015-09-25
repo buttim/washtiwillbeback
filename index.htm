@@ -8,39 +8,43 @@
 		td:nth-child(1) {text-align:right;width:45%;}
 		td:nth-child(2) {text-align:left;padding-left:20px}
 		body {
+			overflow:hidden;
 			text-align:center;
 			font-family:Arial Black;
 			font-weigth:bold;
 			background-color:gray
 		}
-		@keyframes appear {
-			from {color: gray;}
-			to {color: white;}
-		}	
-		.late {
+		.striscione {
 			font-size:75px;
 			color:gray;
 			padding-top:40px;
-			-webkit-animation: appear 7s ease-in 45s infinite alternate;
-			animation: appear 7s ease-in 7s infinite alternate;
+			animation: striscione 5s linear 2s;
+			position: absolute;
+			top: 450px;
+			width:100%
 		}
+		img { 
+			position:absolute; 
+			left:1500px; 
+			top: 500px;
+			animation: aereo 7.5s linear 2s;
+		}
+		.testo { animation: dissolvenza 7s ease-out 7s infinite alternate }
 		.giorni { font-size: 100px }
 		.ore { font-size: 80px }
 		.minuti { font-size: 60px }
 		.secondi { font-size: 40px }
-		body {overflow:hidden}
-		@keyframes travel {
-			from {left:100px;top:900px}
-			to {left:800px;top:-50px}
+		@keyframes dissolvenza {
+			from {color: white;}
+			to {color: gray;}
+		}	
+		@keyframes aereo {
+			from {left:1550px}
+			to {left:-550px}
 		}
-		span { 
-			color:#404040;
-			position:absolute; 
-			left:1500px; 
-			top: 400px;
-			animation: travel 5s linear 3s;
-			font-size:150px;
-			font-family:webdings
+		@keyframes striscione {
+			from {left:1400px;color:white}
+			to {left:0px;color:white}
 		}
 		</style>
 		<script>
@@ -74,8 +78,8 @@
 			<tr class='secondi'><td id='secondi'></td><td id='_secondi'>secondi</td></tr>
 		</table>
 	
-		<div class='late'>al ritorno di Washti</div>
-		<span>&#241;</span>
+		<div class='striscione'><span class='testo'>al ritorno di Washti</span></div>
+		<img src='aereo.png'>
 		<script>
 			setSeconds();
 			window.setInterval(setSeconds,1000);
