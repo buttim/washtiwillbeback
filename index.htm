@@ -8,36 +8,33 @@
 		td:nth-child(1) {text-align:right;width:45%;}
 		td:nth-child(2) {text-align:left;padding-left:20px}
 		body {
-			;overflow:hidden;
 			text-align:center;
 			font-family:Arial Black;
 			font-weigth:bold;
 			background-color:gray
 		}
 		.striscione {
-			font-size:75px;
+			font-size:10vh;
 			left:150%;
 			animation: striscione 5s linear 2s;
 			position: fixed;
-			top: 450px;
 			width:100%;
 			background-color:lightgray;
-			 animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
 		}
 		.aereo {
 			position:fixed; 
 			right:-40%;
-			top: 450px;
 			animation: aereo 5s linear 2s;
 		}
 		.testo { 
 			animation: dissolvenza 7s ease-out 7s infinite alternate;
 			white-space:nowrap
 		}
-		.giorni { font-size: 100px }
-		.ore { font-size: 80px }
-		.minuti { font-size: 60px }
-		.secondi { font-size: 40px; }
+		.giorni { font-size: 17vh }
+		.ore { font-size: 13vh }
+		.minuti { font-size: 9vh }
+		.secondi { font-size: 5vh }
 		@keyframes dissolvenza {
 			from {color: white;}
 			to {color: gray;}
@@ -81,7 +78,7 @@
 			<tr class='minuti'><td id='minuti'></td><td id='_minuti'>minuti</td></tr>
 			<tr class='secondi'><td id='secondi'></td><td id='_secondi'>secondi</td></tr>
 		</table>
-	
+		<div style='font-size:5vh'>&nbsp;</div>
 		<div class='striscione'><span class='testo'>al ritorno di Washti</span></div>
 		<img class='aereo' src='aereo.png'>
 		<script>
