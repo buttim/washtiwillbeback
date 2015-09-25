@@ -22,7 +22,7 @@
 			color:gray;
 			padding-top:40px;
 			-webkit-animation: appear 7s ease-in 45s infinite alternate;
-			animation: appear 7s ease-in 5s infinite alternate;
+			animation: appear 7s ease-in 7s infinite alternate;
 		}
 		.giorni { font-size: 100px }
 		.ore { font-size: 80px }
@@ -30,17 +30,17 @@
 		.secondi { font-size: 40px }
 		body {overflow:hidden}
 		@keyframes travel {
-			from {left:1500px}
-			to {left:-100px}
+			from {left:100px;top:900px}
+			to {left:800px;top:-50px}
 		}
 		span { 
-			transform: scale(-1, 1); 
+			color:#404040;
 			position:absolute; 
 			left:1500px; 
 			top: 400px;
 			animation: travel 5s linear 3s;
 			font-size:150px;
-			font-family:wingdings
+			font-family:webdings
 		}
 		</style>
 		<script>
@@ -75,7 +75,7 @@
 		</table>
 	
 		<div class='late'>al ritorno di Washti</div>
-		<span>Q</span>
+		<span>&#241;</span>
 		<script>
 			setSeconds();
 			window.setInterval(setSeconds,1000);
