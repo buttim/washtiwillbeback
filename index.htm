@@ -10,7 +10,7 @@
 		body {
 			text-align:center;
 			font-family:Arial Black;
-			font-wigth:bold;
+			font-weigth:bold;
 			background-color:gray
 		}
 		@keyframes appear {
@@ -28,6 +28,20 @@
 		.ore { font-size: 80px }
 		.minuti { font-size: 60px }
 		.secondi { font-size: 40px }
+		body {overflow:hidden}
+		@keyframes travel {
+			from {left:1500px}
+			to {left:-100px}
+		}
+		span { 
+			transform: scale(-1, 1); 
+			position:absolute; 
+			left:1500px; 
+			top: 400px;
+			animation: travel 5s linear 3s;
+			font-size:150px;
+			font-family:wingdings
+		}
 		</style>
 		<script>
 			function setSeconds() {
@@ -61,10 +75,10 @@
 		</table>
 	
 		<div class='late'>al ritorno di Washti</div>
+		<span>Q</span>
 		<script>
 			setSeconds();
 			window.setInterval(setSeconds,1000);
-			window.scrollTo(0,1);
 		</script>
 	</body>
 </html>
