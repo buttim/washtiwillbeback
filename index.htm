@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>I'll be back</title>
+		<style>
+		td { width:50% }
+		td:nth-child(1) {text-align:right}
+		td:nth-child(2) {text-align:left;padding-left:20px}
+		body {
+			text-align:center;
+			font-family:Arial Black;
+			font-wigth:bold;
+			background-color:gray
+		}
+		@keyframes appear {
+			from {color: gray;}
+			to {color: white;}
+		}	
+		.late {
+			font-size:75px;
+			color:gray;
+			padding-top:40px;
+			-webkit-animation: appear 7s ease-in 45s infinite alternate;
+			animation: appear 7s ease-in 5s infinite alternate;
+		}
+		.giorni { font-size: 100px }
+		.ore { font-size: 80px }
+		.minuti { font-size: 60px }
+		.secondi { font-size: 40px }
+		</style>
+		<script>
+			function setSeconds() {
+				var now=new Date(),
+					t=new Date(2016,1,28,0,0,0,0);
+				var sec=Math.round((t-now)/1000);
+				var d=Math.floor(sec/3600/24);
+				sec-=d*24*3600;
+				var h=Math.floor(sec/3600);
+				sec-=h*3600;
+				var m=Math.floor(sec/60);
+				sec-=m*60;
+				document.getElementById('giorni').innerHTML=d;
+				document.getElementById('ore').innerHTML=h;
+				document.getElementById('minuti').innerHTML=m;
+				document.getElementById('secondi').innerHTML=sec;
+			}
+		</script>
+	</head>
+	<body>
+		<table style='width:100%'>
+			<tr class='giorni'><td id='giorni'></td><td>giorni</td></tr>
+			<tr class='ore'><td id='ore'></td><td>ore</td></tr>
+			<tr class='minuti'><td id='minuti'></td><td>minuti</td></tr>
+			<tr class='secondi'><td id='secondi'></td><td>secondi</td></tr>
+		</table>
+	
+		<div class='late'>ok</div>
+		<script>
+			setSeconds();
+			window.setInterval(setSeconds,1000);
+		</script>
+	</body>
+</html>
