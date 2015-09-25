@@ -4,6 +4,7 @@
 		<title>Washti will be back!</title>
 		<link rel="shortcut icon" type="image/x-icon" href="w.png">
 		<style>
+		table {width:100%}
 		td:nth-child(1) {text-align:right;width:45%;}
 		td:nth-child(2) {text-align:left;padding-left:20px}
 		body {
@@ -43,15 +44,20 @@
 				document.getElementById('ore').innerHTML=h;
 				document.getElementById('minuti').innerHTML=m;
 				document.getElementById('secondi').innerHTML=sec;
+				
+				document.getElementById('_giorni').innerHTML='giorn'+(d==1?'o':'i');
+				document.getElementById('_ore').innerHTML='or'+(h==1?'a':'e');
+				document.getElementById('_minuti').innerHTML='minut'+(m==1?'o':'i');
+				document.getElementById('_secondi').innerHTML='second'+(sec==1?'o':'i');
 			}
 		</script>
 	</head>
 	<body>
-		<table style='width:100%'>
-			<tr class='giorni'><td id='giorni'></td><td>giorni</td></tr>
-			<tr class='ore'><td id='ore'></td><td>ore</td></tr>
-			<tr class='minuti'><td id='minuti'></td><td>minuti</td></tr>
-			<tr class='secondi'><td id='secondi'></td><td>secondi</td></tr>
+		<table>
+			<tr class='giorni'><td id='giorni'></td><td id='_giorni'>giorni</td></tr>
+			<tr class='ore'><td id='ore'></td><td id='_ore'>ore</td></tr>
+			<tr class='minuti'><td id='minuti'></td><td id='_minuti'>minuti</td></tr>
+			<tr class='secondi'><td id='secondi'></td><td id='_secondi'>secondi</td></tr>
 		</table>
 	
 		<div class='late'>al ritorno di Washti</div>
